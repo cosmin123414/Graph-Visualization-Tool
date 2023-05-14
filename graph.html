@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+  <title>My Graph Visualizer</title>
+  <link rel="stylesheet" href="styles2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="graph"></div>
+    <div id="buttons">
+        <button id="add-vertex">Add Vertex (v)</button>
+        <button id="add-edge">Add Edge (e)</button>
+        <button id="delete">Delete (d)</button>
+        <button id="run-alg">Run Algorithm</button>
+        <div id="algorithm-menu">
+          <button id="run-dfs">Depth-first search</button>
+          <button id="run-bfs">Breadth-first search</button>
+          <button id="alg-3">Algorithm 3</button>
+          <button id="alg-4">Algorithm 4</button>
+        </div>
+        <button id="recenter">Recenter (r)</button>
+    </div>
+    <button id="delete-button" style="display:none">Delete</button>
+    <button id="gear-button" class="gear-button">
+      <i class="fas fa-cog"></i>
+    </button>
+
+    <div id="popup" class="popup-hidden">
+      <div id="popup-content">
+        <p>Click on a starting vertex. Click anywhere to dismiss this popup.</p>
+        <label>
+          <input type="checkbox" id="do-not-show-again" />
+          Do not show this again
+        </label>
+      </div>
+    </div>
+
+    <input type="text" id="label-input">
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>

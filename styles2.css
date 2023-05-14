@@ -1,0 +1,112 @@
+#graph {
+    width: 100%;
+    height: 95%;
+  }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+#buttons {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    height: 5%;
+    width: 100%;
+}
+
+
+#buttons button {
+    border-radius: 0;
+    border: 1px solid #000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(233, 228, 228);
+}
+
+#buttons button:hover {
+  background-color: rgb(198, 195, 195);
+}
+
+button#add-edge.active {
+    background-color: blue;
+    color: white;
+  }
+
+  button#run-alg.active {
+    background-color: blue;
+    color: white;
+  }
+
+  #algorithm-menu {
+    position: absolute;
+    top: 0; /* adjust this value as needed */
+    left: 60%;
+    width: 19.99%; /* adjust this value as needed */
+    height: 150px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* add a border around the menu */
+    transform: translateY(-100%); /* position the menu above the button */
+    display: none;
+    overflow: auto;
+  }
+
+  #buttons button#run-alg:hover + #algorithm-menu {
+    display: block;
+  }
+
+  #buttons button#run-alg:hover {
+    pointer-events: none;
+  }
+
+  #algorithm-menu:hover {
+    display: block; /* show the menu when the button is hovered over */
+  }
+
+  #algorithm-menu button {
+    height: 50px;
+  }
+
+  button#delete.active {
+    background-color: #88B5D7;
+    color: white;
+  }
+
+  .gear-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 8px;
+  }
+
+  .button-gear-color {
+    color: rgb(233, 228, 228);; /* Change 'blue' to any color you prefer. */
+    text-shadow: 0 0 1px #333, 0 0 2px #333, 0 0 3px #333;
+  }
+  .gear-button:hover {
+    color: rgb(198, 195, 195);
+  }
+
+  #popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+  
+  .popup-hidden {
+    display: none;
+  }
